@@ -1,0 +1,813 @@
+h1,
+h2,
+h3,
+h4,
+ul,
+li,
+dl,
+dt,
+dd,
+form,
+fieldset,
+p,
+div,
+pre,
+code,
+body,
+td,
+th {
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+}
+
+fieldset,
+img {
+  border-width: 0px 0px 0px 0px;
+  border-style: none none none none;
+}
+
+code,
+pre,
+tt {
+  font-size: 100%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: normal;
+}
+
+address {
+  font-style: normal;
+}
+
+/* table
+----------------------------------------------------- */
+table {
+  border-collapse: collapse;
+  table-layout: auto;
+}
+
+th {
+  font-weight: normal;
+  text-align: left;
+  empty-cells: show;
+}
+
+td {
+  vertical-align: top;
+  text-align: left;
+  empty-cells: show;
+}
+
+pre {
+  white-space: pre;
+}
+
+br {
+  letter-spacing: normal;
+}
+
+hr {
+  height: 1px;
+  border-style: none;
+  color: #d0d0d0;
+  background-color: #C0C0C0;
+  margin: 10px 0;
+}
+
+a {
+  color: #aa0000;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+ul {
+  list-style-type: none;
+}
+
+input[type="submit"] {
+  margin: 0;
+}
+
+button {
+  margin: 0;
+}
+
+input[type="submit"] {
+  padding: 0;
+  margin: 0;
+}
+
+/* body
+----------------------------------------------------- */
+body {
+  font-family: メイリオ,Meiryo,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",Osaka−等幅,Osaka-Mono,"ＭＳ Ｐゴシック","MS PGothic",Sans-Serif;
+  line-height: 1.3;
+  color: #000;
+  background-color: #000;
+}
+
+h2 {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* wrapper
+----------------------------------------------------- */
+div#wrapper {
+  margin: 0 auto;
+  width: 820px;
+  min-height: 500px;
+  font-size: 75%;
+  padding-top: 10px;
+}
+
+html>body>div#wrapper {
+  font-size: 12px;
+}
+
+div#wrapper input[type="submit"],
+div#wrapper button {
+  background-color: #eee;
+  border: 1px solid #000;
+  padding: 3px 15px;
+}
+
+div#wrapper input[type="submit"]:hover,
+div#wrapper button:hover {
+  background-color: #aaa;
+  cursor: pointer;
+}
+
+/* header
+----------------------------------------------------- */
+div#header {
+  height: 80px;
+  padding-top: 15px;
+  background: url("../images/logo.gif") no-repeat 0 0;
+  zoom: 1;
+}
+
+div#header:after {
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+  content: ".";
+}
+
+div#header h1 {
+  text-indent: -9999px;
+}
+
+div#header div.logo {
+  float: left;
+}
+
+div#header div.mainMenu {
+  float: right;
+  background-color: #fff;
+  border: 2px solid #bb0000;
+}
+
+div#header div.mainMenu ul li {
+  float: left;
+  padding: 10px 15px;
+}
+
+/* contents wrapper
+----------------------------------------------------- */
+div#contentsWrapper {
+  width: 100%;
+  zoom: 1;
+}
+
+div#contentsWrapper:after {
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+  content: ".";
+}
+
+/* sub menu (right column)
+----------------------------------------------------- */
+div#subMenu {
+  float: right;
+  width: 180px;
+  padding: 10px;
+  background-color: #fff;
+  border: 2px solid #bb0000;
+}
+
+.ie_6 div#subMenu {
+  height: 300px;
+}
+
+div#subMenu h2 {
+  font-size: 120%;
+  font-weight: bold;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #cc3300;
+}
+
+div#subMenu p,
+div#subMenu ul,
+div#subMenu form {
+  margin-bottom: 20px;
+}
+
+div#subMenu form input[type="text"],
+div#subMenu form input[type="password"] {
+  width: 95%;
+}
+
+div#subMenu form div {
+  padding-top: 3px;
+}
+
+div#subMenu p.poweredBy {
+  margin: 20px 0 0 0;
+}
+
+div#subMenu p span.username {
+  position: relative;
+  top: -8px;
+}
+
+div#subMenu ul li span.label {
+  float: left;
+}
+
+div#subMenu ul li span.count {
+  float: right;
+  padding-left: 10px;
+}
+
+div#subMenu ul li:after {
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+  content: ".";
+}
+
+/* friend icons
+----------------------------------------------------- */
+#subMenu div.friendIcons {
+  
+}
+
+/* contents
+----------------------------------------------------- */
+div#contents {
+  width: 560px;
+  padding: 20px;
+  float: left;
+  background-color: #fff;
+  border: 2px solid #bb0000;
+  min-height: 350px;
+}
+
+div#contentsNoColumn {
+  padding: 20px;
+  background-color: #fff;
+  border: 2px solid #bb0000;
+  min-height: 350px;
+}
+
+.ie_6 div#contents {
+  height: 350px;
+}
+
+#contents div.message {
+  width: 100%;
+  text-align: center;
+}
+
+#contents div.message p {
+  font-size: 150%;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+#contents span.explain {
+  color: #666;
+}
+
+.ie_6 div#contents input[type="submit"],
+.ie_7 div#contents input[type="submit"] {
+  padding: 3px 3px 0 3px;
+}
+
+/* user settings
+----------------------------------------------------- */
+#contents div.settings {
+  margin-top: 20px;
+}
+
+#contents div.settings div.withdrawal {
+  margin-top: 100px;
+}
+
+#contents div.settings div.withdrawal a {
+  background: url("../images/skull.gif") no-repeat 0 0;
+  padding-left: 20px;
+  font-size: 16px;
+}
+
+/* gameOver
+----------------------------------------------------- */
+#contents div.gameOver {
+  margin: 50px 0;
+  text-align: center;
+  line-height: 1.8em;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+#contents div.gameOver p {
+  margin-bottom: 5px;
+}
+
+#contents div.gameOver a.bye {
+  background: url("../images/trash.gif") no-repeat 0 0;
+  padding-left: 20px;
+}
+
+
+/* tab menu
+----------------------------------------------------- */
+#contents div.userMenu {
+  margin-top: 15px;
+  text-align: center;
+}
+
+#contents div.userMenu:after {
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+  content: ".";
+}
+
+#contents div.userMenu ul {
+  width: 529px;
+  margin: 0 auto;
+  zoom: 1;
+}
+
+#contents div.userMenu ul li {
+  float: left;
+  padding: 2px 0;
+  border-style: solid none none solid;
+  border-width: 1px;
+  border-color: #666;
+  background-color: #eee;
+}
+
+#contents div.userMenu ul li a {
+  width: 130px;
+}
+
+#contents div.userMenu ul li:hover {
+  background-color: #fff4ef;
+}
+
+#contents div.userMenu ul li a:hover {
+  text-decoration: none;
+}
+
+#contents div.userMenu ul li.last {
+  border-right: 1px solid #888;
+}
+
+#contents div.userMenu ul li a {
+  display: block;
+  color: #000;
+}
+
+/* settings menu
+----------------------------------------------------- */
+#contents div.settingsMenu {
+  text-align: center;
+}
+
+#contents div.settingsMenu:after {
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+  content: ".";
+}
+
+#contents div.settingsMenu ul {
+  width: 394px;
+  margin: 10px auto 0 auto;
+  zoom: 1;
+}
+
+#contents div.settingsMenu ul li {
+  float: left;
+  width: 130px;
+  padding: 2px 0;
+  border-style: solid none solid solid;
+  border-width: 1px;
+  border-color: #666;
+  background-color: #eee;
+}
+
+#contents div.settingsMenu ul li:hover {
+  background-color: #fff4ef;
+}
+
+#contents div.settingsMenu ul li a:hover {
+  text-decoration: none;
+}
+
+#contents div.settingsMenu ul li.last {
+  border-right: 1px solid #888;
+}
+
+#contents div.settingsMenu ul li a {
+  display: block;
+  color: #000;
+}
+
+#contents div.settingsMenu div.head {
+  zoom: 1;
+}
+
+#contents div.settingsMenu div.head:after {
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+  content: ".";
+}
+
+#contents div.settingsMenu div.head img {
+  float: left;
+}
+
+#contents div.settingsMenu div.head h2 {
+  float: left;
+  margin-left: 8px;
+}
+
+/* others header
+----------------------------------------------------- */
+#contents div.othersHeader h2 {
+  position: relative;
+  display: inline;
+  margin-left: 5px;
+  top: -18px;
+}
+
+#contents div.othersHeader form {
+  margin-bottom: 10px;
+}
+
+/* a status
+----------------------------------------------------- */
+#contents div.status h2 {
+  position: relative;
+  display: inline;
+  margin-left: 5px;
+  top: -18px;
+}
+
+#contents div.status p {
+  font-size: 200%;
+}
+
+#contents div.status p span {
+  font-size: 50%;
+}
+
+/* common form
+----------------------------------------------------- */
+#contents form.common input[type="text"],
+#contents form.common input[type="password"] {
+  width: 200px;
+}
+
+/* updated message
+----------------------------------------------------- */
+#contents div#statusUpdated {
+  border: 1px solid white;
+  margin-bottom: 10px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 120%;
+}
+
+#contents div#statusUpdated p {
+  margin: 10px 0;
+}
+
+/* status form
+----------------------------------------------------- */
+#contents #statusForm div {
+  text-align: center;
+}
+
+#contents #statusForm textarea#comment {
+  width: 100%;
+  height: 50px;
+  margin: 10px 0 5px 0;
+}
+
+#contents #statusForm p {
+  position: relative;
+}
+
+#contents #statusForm span#charCounter {
+  right: 0;
+  position: absolute;
+  margin-top: -30px;
+  font-size: 250%;
+  font-weight: bold;
+  color: #bbb;
+}
+
+.ie_6 div#contents #statusForm span#charCounter {
+  right: 20px;
+}
+
+/* statuses table
+----------------------------------------------------- */
+#contents table.statuses {
+  width: 560px;
+}
+
+#contents table.statuses tr:hover {
+  background-color: #f5f5f5;
+}
+
+#contents table.statuses td {
+  border-style: solid none;
+  border-width: 1px;
+  border-color: #bbb;
+  padding: 5px;
+  vertical-align: middle;
+}
+
+#contents table.statuses td.image {
+  width: 48px;
+}
+
+#contents table.statuses td.image a img {
+  vertical-align: top;
+  width: 100px;
+  height: 100px;
+}
+
+#contents table.statuses td.status {
+  width: 479px;
+}
+
+#contents table.statuses td.status span {
+  margin-right: 5px;
+}
+
+#contents table.statuses td.status span.first {
+  font-size: 200%;
+}
+
+#contents table.statuses td.icon {
+  width: 13px;
+}
+
+#contents table.statuses td.icon img {
+  display: block;
+  width:  13px;
+  cursor: pointer;
+}
+
+#contents table.statuses td.icon img.replyButton {
+  margin-bottom: 5px;
+}
+
+/* followers table
+----------------------------------------------------- */
+#contents table.followers {
+  width: 100%;
+}
+
+#contents table.followers td {
+  border-bottom: 1px solid #bbb;
+  padding: 5px;
+  vertical-align: middle;
+}
+
+#contents table.followers td.image {
+  width: 48px;
+}
+
+#contents table.followers td.icon {
+  width: 70px;
+  text-align: right;
+}
+
+/* requests table
+----------------------------------------------------- */
+#contents table.requests {
+  width: 100%;
+}
+
+#contents table.requests td {
+  border-bottom: 1px solid #bbb;
+  padding: 5px;
+  vertical-align: middle;
+}
+
+#contents table.requests td.image {
+  width: 48px;
+}
+
+#contents table.requests td.icon {
+  width: 180px;
+  text-align: right;
+}
+
+/** --------------------
+ * 汎用テーブルフォーム
+ */
+#contents div.commonForm table {
+  width: 80%;
+  margin: 0 auto;
+}
+
+#contents div.commonForm th {
+  width: 30%;
+  text-align: right;
+  padding: 8px 8px 8px 0;
+}
+
+#contents div.commonForm th.picture {
+  width: 20%;
+}
+
+#contents div.commonForm td {
+  padding: 8px 0 8px 8px;
+}
+
+#contents div.commonForm th,
+#contents div.commonForm td {
+  border-bottom: 1px solid #d0d0d0;
+}
+
+#contents div.commonForm td.button {
+  text-align: center;
+  border-bottom: none;
+}
+
+/* protect user
+----------------------------------------------------- */
+#contents div.protect {
+  margin-top: 5px;
+  padding: 20px;
+  border: 1px solid #bb0000;
+  zoom: 1;
+}
+
+#contents div.protect:after {
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+  content: ".";
+}
+
+#contents div.protect form {
+  display: inline;
+}
+
+#contents div.protect div.image {
+  float: left;
+}
+
+#contents div.protect div.request {
+  float: left;
+  padding-left: 20px;
+}
+
+#contents div.protect div.request p {
+  margin-bottom: 3px;
+}
+
+#contents div.protect div.request p.emphasis {
+  font-weight: bold;
+  font-size: 130%;
+  margin-bottom: 8px;
+}
+
+/* client
+----------------------------------------------------- */
+#client {
+  width: 450px;
+  background-color: #fff;
+  font-size: 12px;
+}
+
+#client div.commentForm {
+  padding: 5px;
+  width: 440px;
+  text-align: center;
+}
+
+#client #comment {
+  width: 95%;
+  font-size: 12px;
+}
+
+#client table.statuses td {
+  border-style: solid none;
+  border-width: 1px;
+  border-color: #bbb;
+  padding: 5px;
+  vertical-align: middle;
+}
+
+#client table.statuses td.image {
+  width: 24px;
+}
+
+#client table.statuses td.image img {
+  vertical-align: top;
+}
+
+#client table.statuses td.status {
+  width: 406px;
+}
+
+#client table.statuses td.status strong,
+#client table.statuses td.status span.time {
+  color: #aa0000;
+}
+
+/* errors list
+----------------------------------------------------- */
+div.sbl_error {
+  margin: 10px 0;
+  padding: 10px;
+  border: 2px solid #bb0000;
+  background-color: #fff4ef;
+}
+
+div.sbl_error ul li {
+  padding-left: 13px;
+  background: url("images/icon_1.gif") no-repeat 0 50%;
+}
+
+/* rss
+----------------------------------------------------- */
+#contents div.rss {
+  float: left;
+  margin-top: 10px;
+  border: 1px solid #aaa;
+  padding: 8px 15px;
+}
+
+/* pager
+----------------------------------------------------- */
+#contents div.pagelink {
+  float: right;
+  margin-top: 10px;
+}
+
+#contents div.pagelink div {
+  border: 1px solid #aaa;
+  float: left;
+  padding: 8px 10px;
+}
+
+#contents div.pagelink div.nextlink {
+  margin-left: 10px;
+}
+
+/* footer
+----------------------------------------------------- */
+div#footer {
+  margin: 10px 0 20px 0;
+  padding: 8px 0;
+  background-color: #fff;
+  border: 2px solid #bb0000;
+  text-align: center;
+}
+
+div#footer p {
+  margin-top: 5px;
+}
+
+div.friendIcons img {
+  width: 100px;
+  height: 100px;
+}
