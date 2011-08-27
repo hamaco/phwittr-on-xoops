@@ -563,7 +563,8 @@ div#contentsNoColumn {
   width: 48px;
 }
 
-#contents table.statuses td.image a img {
+#contents table.statuses td.image a img,
+#contents table.followers td.image a img {
   vertical-align: top;
   width: 100px;
   height: 100px;
