@@ -79,6 +79,7 @@ class Views_Submenu extends Sabel_ValueObject
     $aUser = new User($this->userId);
     $this->userData = $this->getUserData();
     $this->userData->name = $aUser->getName();
+    $this->userData->uname = $aUser->uname;
     
     $contents = file_get_contents($this->templateDir . DS . "others.tpl");
     return $renderer->rendering($contents, $this->values);

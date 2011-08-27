@@ -11,19 +11,19 @@
 <ul>
   <li>
     <span class="label">
-      <hlink uri="n: users, c: {$userData->name}, a: friends">このユーザがフォロー</hlink>
+      <hlink uri="n: users, c: {$userData->uname}, a: friends">このユーザがフォロー</hlink>
     </span>
     <span class="count"><?= $userData->friendsCount ?></span>
   </li>
   <li>
     <span class="label">
-      <hlink uri="n: users, c: {$userData->name}, a: followers">このユーザをフォロー</hlink>
+      <hlink uri="n: users, c: {$userData->uname}, a: followers">このユーザをフォロー</hlink>
     </span>
     <span class="count"><?= $userData->followersCount ?></span>
   </li>
   <li>
     <span class="label">
-      <hlink uri="n: users, c: {$userData->name}, a: ">これまでの投稿</hlink>
+      <hlink uri="n: users, c: {$userData->uname}, a: ">これまでの投稿</hlink>
     </span>
     <span class="count"><?= $userData->statusesCount ?></span>
   </li>
