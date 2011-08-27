@@ -125,7 +125,7 @@ function showUpdatedAt($updatedAt)
 }
 
 function user_avatarize($uid) {
-  require_once(XOOPS_ROOT_PATH . "/class/smarty/plugins/modifier.xoops_user_avatarize.php");
+  require_once(SMARTY_DIR . "plugins/modifier.xoops_user_avatarize.php");
 
   return smarty_modifier_xoops_user_avatarize($uid);
 }
