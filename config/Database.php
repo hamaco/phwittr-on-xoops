@@ -6,13 +6,13 @@ class Config_Database implements Sabel_Config
   {
     $params = array(
       "default" => array(
-        "package"  => "sabel.db.mysql",
+        "package"  => "sabel.db.pdo.mysql",
         "charset"  => "utf8",
-        "host"     => XOOPS_DB_HOST,
+        "host"     => "mysql",
         "port"     => 3306,
-        "database" => XOOPS_DB_NAME,
-        "user"     => XOOPS_DB_USER,
-        "password" => XOOPS_DB_PASS,
+        "database" => "phwittr_dev",
+        "user"     => "root",
+        "password" => "root",
     ));
     
     return $params;

@@ -33,7 +33,8 @@ class Sabel_Session_PHP extends Sabel_Session_Abstract
   public function start()
   {
     if (!$this->started) {
-      // session_start();
+      session_start();
+
       $this->sessionId  = session_id();
       $this->attributes =& $_SESSION;
       $this->initialize();

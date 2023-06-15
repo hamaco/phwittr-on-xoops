@@ -4,12 +4,12 @@ class Controllers_Application extends Sabel_Controller_Page
 {
   public function initialize()
   {
-    $root = XCube_Root::getSingleton();
-    $user = $root->mContext->mXoopsUser;
-    if ($root->mContext->mUser->isInRole("Site.RegisteredUser") && !$this->aclUser->isAuthenticated()) {
-      $user = $root->mContext->mXoopsUser;
-      $this->login($user, true);
-    }
+    // $root = XCube_Root::getSingleton();
+    // $user = $root->mContext->mXoopsUser;
+    // if ($root->mContext->mUser->isInRole("Site.RegisteredUser") && !$this->aclUser->isAuthenticated()) {
+    //   $user = $root->mContext->mXoopsUser;
+    //   $this->login($user, true);
+    // }
 
     // Fuckin XOOPS!!!
     // global $xoopsTpl;
@@ -32,9 +32,9 @@ class Controllers_Application extends Sabel_Controller_Page
   {
     $aclUser = $this->aclUser;
     
-    $aclUser->id    =(int) $aUser->uid();
-    $aclUser->name  = $aUser->uname();
-    $aclUser->image = $aUser->get("user_avatar");
-    $aclUser->isProtected = false;//$aUser->isProtected();
+    $aclUser->id    = (int) $aUser->id;
+    $aclUser->name  = $aUser->user_name;
+    $aclUser->image = $aUser->image;
+    $aclUser->isProtected = $aUser->isProtected();
   }
 }

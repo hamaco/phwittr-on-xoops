@@ -11,8 +11,8 @@ class Helpers_Paginator_Status extends Sabel_Object
     }
     
     $join = new Sabel_Db_Join("Status");
-    $paginator = new Paginator($join->add("Users"));
-    $paginator->setCondition("Users.uid", $userId);
+    $paginator = new Paginator($join->add("User"));
+    $paginator->setCondition("User.id", $userId);
     $paginator->setDefaultOrder("Status.created_at", "desc");
     
     return $paginator->build($limit, $params);
@@ -28,8 +28,8 @@ class Helpers_Paginator_Status extends Sabel_Object
     $ids[] = $userId;
     
     $join = new Sabel_Db_Join("Status");
-    $paginator = new Paginator($join->add("Users"));
-    $paginator->setCondition(C::create(C::IN, "Users.uid", $ids));
+    $paginator = new Paginator($join->add("User"));
+    $paginator->setCondition(C::create(C::IN, "User.id", $ids));
     $paginator->setDefaultOrder("Status.created_at", "desc");
     
     return $paginator->build($limit, $params);
@@ -42,7 +42,7 @@ class Helpers_Paginator_Status extends Sabel_Object
     }
     
     $join = new Sabel_Db_Join("Status");
-    $paginator = new Paginator($join->add("Users"));
+    $paginator = new Paginator($join->add("User"));
     $paginator->setCondition("Status.reply_user_id", $userId);
     $paginator->setDefaultOrder("Status.created_at", "desc");
     

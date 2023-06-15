@@ -1,7 +1,7 @@
 <div class="othersHeader">
   <img alt="<?= $aUser->user_name ?>"
        title="<?= $aUser->user_name ?>"
-       src="<?= user_avatarize($aUser->id) ?>" />
+       src="<?= user_avatarize($aUser) ?>" />
   
   <h2><?= $aUser->user_name ?></h2>
   

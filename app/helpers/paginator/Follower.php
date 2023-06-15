@@ -11,7 +11,7 @@ class Helpers_Paginator_Follower extends Sabel_Object
     }
     
     $join = new Sabel_Db_Join("Follower");
-    $paginator = new Paginator($join->add("Users", "", array("id" => "uid", "fkey" => "follow_id")));
+    $paginator = new Paginator($join->add("User", "", array("id" => "id", "fkey" => "follow_id")));
     $paginator->setCondition("Follower.user_id", $userId);
     $paginator->setDefaultOrder("Follower.created_at", "desc");
     
@@ -25,7 +25,7 @@ class Helpers_Paginator_Follower extends Sabel_Object
     }
     
     $join = new Sabel_Db_Join("Follower");
-    $paginator = new Paginator($join->add("Users", "", array("id" => "uid", "fkey" => "user_id")));
+    $paginator = new Paginator($join->add("User", "", array("id" => "id", "fkey" => "user_id")));
     $paginator->setCondition("Follower.follow_id", $userId);
     $paginator->setDefaultOrder("Follower.created_at", "desc");
     

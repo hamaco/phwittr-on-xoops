@@ -1,14 +1,14 @@
 <div class="othersHeader">
-  <img alt="<?= $aUser->getName() ?>"
-       title="<?= $aUser->getName() ?>"
-       src="<?e user_avatarize($aUser->uid) ?>" />
-  <h2><?= $aUser->getName() ?></h2>
+  <img alt="<?= $aUser->user_name ?>"
+       title="<?= $aUser->user_name ?>"
+       src="<?e user_avatarize($aUser) ?>" />
+  <h2><?= $aUser->user_name ?></h2>
   
   <if expr="$aclUser->isAuthenticated()">
     <if expr="$isFollowed">
       <form action="<?= uri("n: default, c: friendship, a: destroy") ?>" method="post">
         <div>
-          <input type="hidden" name="id" value="<?= $aUser->uid ?>" />
+          <input type="hidden" name="id" value="<?= $aUser->id ?>" />
           <input type="hidden" name="SBL_CLIENT_ID" value="<?= $clientId ?>" />
           <input type="submit" value="フォロー解除" />
         </div>
@@ -16,7 +16,7 @@
     <else />
       <form action="<?= uri("n: default, c: friendship, a: create") ?>" method="post">
         <div>
-          <input type="hidden" name="id" value="<?= $aUser->uid ?>" />
+          <input type="hidden" name="id" value="<?= $aUser->id ?>" />
           <input type="hidden" name="SBL_CLIENT_ID" value="<?= $clientId ?>" />
           <input type="submit" value="フォローする" />
         </div>

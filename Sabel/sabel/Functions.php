@@ -94,7 +94,8 @@ if (!function_exists("lcfirst")) {
     if (!is_string($str) || $str === "") {
       return "";
     } else {
-      $str{0} = strtolower($str{0});
+        dump($str);exit;
+      // $str{0} = strtolower($str{0});
       return $str;
     }
   }

@@ -13,17 +13,17 @@ Sabel_Db_Model_Localize::setColumnNames("User",
 
 class User extends Sabel_Db_Model
 {
-  protected $tableName = "users";
+  // protected $tableName = "user";
   
-  public function getName()
-  {
-    return ($this->name) ? $this->name : $this->uname;
-  }
+  // public function getName()
+  // {
+  //   return ($this->name) ? $this->name : $this->uname;
+  // }
   
   public static function findByUsername($username)
   {
     $self = new self();
-    return $self->selectOne("uname", $username);
+    // return $self->selectOne("uname", $username);
     return $self->selectOne("user_name", $username);
   }
   

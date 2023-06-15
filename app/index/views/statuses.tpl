@@ -8,10 +8,10 @@
     <foreach from="$paginator->results" key="$i" value="$status">
       <tr>
         <td class="image">
-          <hlink uri="n: users, c: {$status->Users->uname}, a: ">
-            <img alt="<?= $status->Users->uname ?>"
-                 title="<?= $status->Users->uname ?>"
-                 src="<?e user_avatarize($status->Users->uid) ?>" />
+          <hlink uri="n: users, c: {$status->User->user_name}, a: ">
+            <img alt="<?= $status->User->user_name ?>"
+                 title="<?= $status->User->user_name ?>"
+                 src="<?e user_avatarize($status->User) ?>" />
           </hlink>
         </td>
         
@@ -19,7 +19,7 @@
           <p>
             <if expr="!$noUsername">
             <strong>
-              <hlink uri="n: users, c: {$status->Users->uname}, a: "><?= $status->Users->uname ?></hlink>
+              <hlink uri="n: users, c: {$status->User->user_name}, a: "><?= $status->User->user_name ?></hlink>
             </strong>
             </if>
             
@@ -33,7 +33,7 @@
                  class="trashButton"
                  src="<?= linkto("images/trash.gif") ?>" />
           <elseif expr="$aclUser->isAuthenticated()">
-            <img username="<?= $status->Users->uname ?>"
+            <img username="<?= $status->User->user_name ?>"
                  class="replyButton"
                  src="<?= linkto("images/reply.gif") ?>" />
           </if>

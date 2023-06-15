@@ -24,6 +24,7 @@ class Acl_Processor extends Sabel_Bus_Processor
     $response = $bus->get("response");
     
     $this->user = $user = new Acl_User($bus->get("session"));
+    // dump($this->user);exit;
     if (isset($user->login_uri) && $user->login_uri !== $request->getUri()) {
       $user->remove("login_uri");
       $user->remove("back_uri");

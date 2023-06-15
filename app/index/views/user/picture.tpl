@@ -9,7 +9,7 @@
         <th class="picture">
           <img alt="<?= $aclUser->name ?>"
                title="<?= $aclUser->name ?>"
-               src="<?e user_avatarize($aclUser->id) ?>" />
+               src="<?e user_avatarize($aclUser) ?>" />
         </th>
         <td>
           <input type="file" name="picture" /><br/>

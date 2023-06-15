@@ -89,7 +89,7 @@ class Imanage_Object extends Sabel_Object
   {
     $baseDir = $this->getBaseDir();
     foreach (scandir($baseDir) as $item) {
-      if ($item{0} === ".") continue;
+      if (substr($item, 0, 1) === ".") continue;
       
       if (is_dir($baseDir . DS . $item)) {
         if (is_file($baseDir . DS . $item . DS . $fileName)) {

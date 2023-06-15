@@ -5,15 +5,15 @@
       <tr>
         <td class="image">
           <hlink uri="n: users, c: {$item->Users->uname}, a: ">
-            <img alt="<?= $item->Users->getName() ?>"
-                 title="<?= $item->Users->getName() ?>"
-                 src="<?e user_avatarize($item->Users->uid) ?>" />
+            <img alt="<?= $item->Users->user_name ?>"
+                 title="<?= $item->Users->user_name ?>"
+                 src="<?e user_avatarize($item->User) ?>" />
           </hlink>
         </td>
         <td class="user">
           <strong>
             <hlink uri="n: users, c: {$item->Users->uname}, a: ">
-              <?= $item->Users->getName() ?>
+              <?= $item->Users->user_name ?>
             </hlink>
           </strong>
           <p>

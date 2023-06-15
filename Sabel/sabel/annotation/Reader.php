@@ -78,9 +78,10 @@ class Sabel_Annotation_Reader extends Sabel_Object
       foreach ($match as $k => $v) {
         if ($v === "") continue;
         
-        $quote = $v{0};
-        if (($quote === '"' || $quote === "'") &&
-            $quote === $v{strlen($v) - 1}) {
+        // $quote = $v{0};
+        $quote = substr($v, 0, 1);
+        // if (($quote === '"' || $quote === "'") && $quote === $v{strlen($v) - 1}) {
+        if (($quote === '"' || $quote === "'") && $quote === substr($v, -1)) {
           $annotValues[$k] = substr(str_replace("\\{$quote}", $quote, $v), 1, -1);;
         } else {
           $annotValues[$k] = $v;

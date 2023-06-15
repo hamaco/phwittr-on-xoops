@@ -381,7 +381,7 @@ abstract class Sabel_Db_Statement extends Sabel_Object
   protected function createSelectSql()
   {
     $tblName = $this->quoteIdentifier($this->table);
-    $prefixedTblName = $this->quoteIdentifier(XOOPS_DB_PREFIX . "_" . $this->table);
+    $prefixedTblName = $this->quoteIdentifier($this->table);
     $projection = $this->getProjection();
     
     $sql = "SELECT $projection FROM "
@@ -396,7 +396,7 @@ abstract class Sabel_Db_Statement extends Sabel_Object
   
   protected function createInsertSql()
   {
-    $sql  = "INSERT INTO " . $this->quoteIdentifier(XOOPS_DB_PREFIX . "_" . $this->table) . " (";
+    $sql  = "INSERT INTO " . $this->quoteIdentifier($this->table) . " (";
     $cols = array();
     $hlds = array();
     
@@ -427,13 +427,13 @@ abstract class Sabel_Db_Statement extends Sabel_Object
       }
     }
     
-    $tblName = $this->quoteIdentifier(XOOPS_DB_PREFIX . "_" . $this->table);
+    $tblName = $this->quoteIdentifier($this->table);
     return "UPDATE $tblName SET " . implode(", ", $updates) . $this->where;
   }
   
   protected function createDeleteSql()
   {
-    return "DELETE FROM " . $this->quoteIdentifier(XOOPS_DB_PREFIX . "_" . $this->table) . $this->where;
+    return "DELETE FROM " . $this->quoteIdentifier($this->table) . $this->where;
   }
   
   protected function createConstraintSql()

@@ -20,7 +20,7 @@ class Index_Controllers_Status extends Sabel_Controller_Page
           "comment"    => showComment($result->aStatus->comment),
           "updated"    => showUpdatedAt($result->aStatus->created_at),
           "user_home"  => uri("n: users, c: {$user->name}, a: "),
-          "image_uri"  => user_avatarize($user->id),
+          "image_uri"  => user_avatarize($user),
           "status_uri" => uri("c: index, a: status, param: {$result->aStatus->id}"),
           "trash_gif"  => linkto("images/trash.gif"),
           "reply_gif"  => linkto("images/reply.gif"),

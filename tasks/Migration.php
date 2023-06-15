@@ -31,11 +31,6 @@ class Migration extends Sabel_Sakle_Task
       exit;
     }
     
-    if (!defined('_LEGACY_PREVENT_LOAD_CORE_')) {
-      define('_LEGACY_PREVENT_LOAD_CORE_', 'suin.asia');
-      require_once(dirname(dirname(RUN_BASE)) . '/mainfile.php');
-    }
-    
     $this->defineEnvironment($this->arguments[0]);
     
     Sabel_Db_Config::initialize(new Config_Database());

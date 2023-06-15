@@ -28,7 +28,7 @@ class Sabel_Db_Join_Object extends Sabel_Db_Join_TemplateMethod
   
   public function getJoinQuery(Sabel_Db_Statement $stmt, $joinType)
   {
-    $name  = $stmt->quoteIdentifier(XOOPS_DB_PREFIX . "_" . $this->tblName);
+    $name  = $stmt->quoteIdentifier($this->tblName);
 
     $keys  = $this->joinKey;
     $query = array(" $joinType JOIN $name ");

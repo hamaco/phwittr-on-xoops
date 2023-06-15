@@ -5,7 +5,7 @@ class Follower extends Sabel_Db_Model
   public static function getFriends($userId, $limit)
   {
     $join = new Sabel_Db_Join(new self());
-    $join->add("Users", "", array("id" => "uid", "fkey" => "follow_id"));
+    $join->add("User", "", array("id" => "id", "fkey" => "follow_id"));
     $join->setCondition("Follower.user_id", $userId);
     $join->setOrderBy("Follower.created_at");
     $join->setLimit($limit);

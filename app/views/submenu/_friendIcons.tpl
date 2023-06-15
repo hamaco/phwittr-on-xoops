@@ -4,11 +4,11 @@
   <if expr="$userData->friends">
     <? for ($i = 0; $i < FRIENDS_ICON_LIMIT; $i++) : ?>
       <? if (!isset($userData->friends[$i])) break ?>
-      <? $friend = $userData->friends[$i]->Users ?>
-      <a href="<?= uri("n: users, c: {$friend->uname}, a: ") ?>">
-        <img alt="<?= $friend->getName() ?>"
-             title="<?= $friend->getName() ?>"
-             src="<?e user_avatarize($friend->uid) ?>" />
+      <? $friend = $userData->friends[$i]->User ?>
+      <a href="<?= uri("n: users, c: {$friend->user_name}, a: ") ?>">
+        <img alt="<?= $friend->user_name ?>"
+             title="<?= $friend->user_name ?>"
+             src="<?e user_avatarize($friend) ?>" />
       </a>
     <? endfor ?>
     <if expr="count($userData->friends) > FRIENDS_ICON_LIMIT">

@@ -8,7 +8,7 @@
         <hlink uri="n: users, c: {$request->User->user_name}, a: ">
           <img alt="<?= $request->User->user_name ?>"
                title="<?= $request->User->user_name ?>"
-               src="<?= user_avatarize($request->User->id) ?>" />
+               src="<?= user_avatarize($request->User) ?>" />
         </hlink>
       </td>
       

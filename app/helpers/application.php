@@ -124,8 +124,7 @@ function showUpdatedAt($updatedAt)
   }
 }
 
-function user_avatarize($uid) {
-  require_once(SMARTY_DIR . "plugins/modifier.xoops_user_avatarize.php");
-
-  return smarty_modifier_xoops_user_avatarize($uid);
+function user_avatarize($aclUser) {
+  return thumbnail_uri($aclUser->image, '48x48');
+  return '/images/nophoto.png';
 }

@@ -34,7 +34,7 @@ class Status extends Sabel_Db_Model
     if (preg_match('/^@(\w{1,20})/', $comment, $matches) === 1) {
       $targetUser = User::findByUsername($matches[1]);
       if ($targetUser->isActive()) {
-        $status->reply_user_id = $targetUser->uid;
+        $status->reply_user_id = $targetUser->id;
       }
     }
     

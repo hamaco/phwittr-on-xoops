@@ -51,7 +51,7 @@ SQL;
     
     $columns = array();
     foreach ($rows as $row) {
-      $colName = $row["column_name"];
+      $colName = $row["COLUMN_NAME"];
       $columns[$colName] = $this->createColumn($row);
     }
     
@@ -61,25 +61,25 @@ SQL;
   protected function createColumn($row)
   {
     $column = new Sabel_Db_Metadata_Column();
-    $column->name = $row["column_name"];
-    $column->nullable = ($row["is_nullable"] !== "NO");
+    $column->name = $row["COLUMN_NAME"];
+    $column->nullable = ($row["IS_NULLABLE"] !== "NO");
     
-    if ($row["column_type"] === "tinyint(1)") {
+    if ($row["COLUMN_TYPE"] === "tinyint(1)") {
       $column->type = Sabel_Db_Type::BOOL;
     } else {
-      Sabel_Db_Type_Manager::create()->applyType($column, $row["data_type"]);
+      Sabel_Db_Type_Manager::create()->applyType($column, $row["DATA_TYPE"]);
     }
     
-    $this->setDefault($column, $row["column_default"]);
-    $column->primary   = ($row["column_key"] === "PRI");
-    $column->increment = ($row["extra"] === "auto_increment");
+    $this->setDefault($column, $row["COLUMN_DEFAULT"]);
+    $column->primary   = ($row["COLUMN_KEY"] === "PRI");
+    $column->increment = ($row["EXTRA"] === "auto_increment");
     
     if ($column->primary) {
       $column->nullable = false;
     }
     
     if ($column->isString()) {
-      $column->max = (int)$row["character_maximum_length"];
+      $column->max = (int)$row["CHARACTER_MAXIMUM_LENGTH"];
     }
     
     return $column;
@@ -117,7 +117,7 @@ SQL;
     $uniques = array();
     foreach ($rows as $row) {
       $key = $row["unique_key"];
-      $uniques[$key][] = $row["column_name"];
+      $uniques[$key][] = $row["COLUMN_NAME"];
     }
     
     return array_values($uniques);

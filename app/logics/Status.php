@@ -23,13 +23,13 @@ class Logics_Status extends Logics_Base
         "コメントは" . Status::COMMENT_MAX_LENGTH . "以内で入力してください"
       ));
     } else {
-      // $aUser = new User($userId);
-      // if ($aUser->isActive()) {
-        // $aUser->save(array("updated_at" => now()));
+      $aUser = new User($userId);
+      if ($aUser->isActive()) {
+        $aUser->save(array("updated_at" => now()));
         $result->aStatus = Status::post($userId, $comment);
-      // } else {
-        // throw new Exception_UserNotFound(__METHOD__);
-      // }
+      } else {
+        throw new Exception_UserNotFound(__METHOD__);
+      }
     }
     
     return $result;

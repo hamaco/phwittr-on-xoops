@@ -1,6 +1,6 @@
 <div class="settingsMenu">
   <div class="head">
-    <img src="<?e user_avatarize($aclUser->id) ?>" />
+    <img src="<?e user_avatarize($aclUser) ?>" />
     <h2><?= $aclUser->name ?></h2>
   </div>
   <ul>

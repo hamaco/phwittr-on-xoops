@@ -141,7 +141,7 @@ class Sabel_Map_Config_Route
     $url = array();
     
     foreach ($parts as $name) {
-      if ($name{0} !== ":") {
+      if (substr($name, 0, 1) !== ":") {
         $url[] = $name;
       } else {
         $key = ltrim($name, ":");

@@ -211,7 +211,7 @@ class Renderer_Sabel_Replacer extends Sabel_Object
       throw new Sabel_Exception_Runtime($message);
     }
     
-    if ($form{0} !== '$') $form = '$' . $form . "Form";
+    if (substr($form, 0, 1) !== '$') $form = '$' . $form . "Form";
     
     $fmt = '  <?php echo $this->partial("error", array("errors" => %1$s->getErrors())) ?>' . PHP_EOL;
     return sprintf($fmt, $form);

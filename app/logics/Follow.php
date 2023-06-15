@@ -20,8 +20,8 @@ class Logics_Follow extends Logics_Base
       if ($target->isProtected()) {
         $request = new Request();
         $request->save(array(
-          "user_id"    => $aUser->uid,
-          "request_id" => $target->uid,
+          "user_id"    => $aUser->id,
+          "request_id" => $target->id,
           "created_at" => now()
         ));
         
@@ -29,8 +29,8 @@ class Logics_Follow extends Logics_Base
       } else {
         $follower = new Follower();
         $follower->save(array(
-          "user_id"    => $aUser->uid,
-          "follow_id"  => $target->uid,
+          "user_id"    => $aUser->id,
+          "follow_id"  => $target->id,
           "created_at" => now()
         ));
         
